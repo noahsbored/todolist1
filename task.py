@@ -27,30 +27,29 @@ def delete_task(task_index):
 def main():
     while True:
         print("\nMenu:")
-        print("1. Add a task")
-        print("2. View tasks")
-        print("3. Mark a task as complete")
-        print("4. Delete a task")
-        print("5. Quit")
+        print("1. add task")
+        print("2. view tasks")
+        print("3. mark a task as complete")
+        print("4. delete a task")
+        print("5. quit")
 
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            task = input("Enter task description: ")
+            task = input("enter task description: ")
             add_task(task)
         elif choice == "2":
             view_tasks()
         elif choice == "3":
-            task_index = int(input("Enter the index of the task to mark as complete: "))
+            task_index = int(input("enter the index of the task to mark as complete: "))
             mark_task_complete(task_index)
         elif choice == "4":
-            task_index = int(input("Enter the index of the task to delete: "))
+            task_index = int(input("enter the index of the task to delete: "))
             delete_task(task_index)
         elif choice == "5":
-            print("Exiting.")
+            print("exiting.")
             break
         else:
-            print("Invalid choice. Please enter a number between 1 and 5.")
+            print("invalid choice. Please enter a number between 1 and 5.")
 
-if __name__ == "__main__":
-    main()
+main()
